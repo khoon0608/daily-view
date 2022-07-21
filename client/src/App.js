@@ -3,22 +3,26 @@
 import { useState } from "react";
 
 function App() {
-  const [arr, setArr] = useState([]);
-  const [num, setNum] = useState(0);
-
+  const [txt, setTxt] = useState("");
+  const [txtList, setTxtList] = useState([]);
   return (
     <div id='title'>
       <h1>Daily-View</h1>
-      {arr.map((ele, idx) => (
-        <span key={idx}>{ele}</span>
-      ))}
+
+      <input onChange={(e) => setTxt(e.target.value)} type='text' value={txt} />
       <button
         onClick={() => {
-          setArr((prev) => [...prev, num]);
-          setNum(num + 1);
+          alert(txt);
+          setTxtList((prev) => [...prev, txt]);
+          setTxt("");
         }}>
-        증가
+        Submit
       </button>
+      <ul id="post-list" >
+        {txtList.map((txt, idx) => (
+          <li key={idx}>{txt}</li>
+        ))}
+      </ul>
     </div>
   );
 }

@@ -6,10 +6,21 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+}
+
 div[id="title"] {
+  width: 1000px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ul[id="post-list"] {
+    display: grid;
+    width: 300px;
+    grid-template-columns: 33% 33% 33%;
+  }
 }
