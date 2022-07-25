@@ -1,18 +1,33 @@
 /** @format */
 
-import React, { useState } from "react";
+import React from "react";
 
-const Upload = () => {
-  const [txt, setTxt] = useState("");
-  const [txtList, setTxtList] = useState([]);
+const Upload = ({ post, setPost, setPostList }) => {
   return (
-    <div id='title'>
-      <input onChange={(e) => setTxt(e.target.value)} type='text' value={txt} />
+    <div id='upload'>
+      <input
+        onChange={(e) => setPost({ ...post, title: e.target.value })}
+        id='input-title'
+        type='text'
+        placeholder='제목을 입력하세요'
+        value={post.title}
+      />
+      <div id='btn-pic'>사진</div>
+      <textarea
+        onChange={(e) => setPost({ ...post, body: e.target.value })}
+        name=''
+        id='input-body'
+        cols='30'
+        rows='10'></textarea>
       <button
         onClick={() => {
-          alert(txt);
-          setTxtList((prev) => [...prev, txt]);
-          setTxt("");
+          alert(post.body);
+          setPostList((prev) => [...prev, post]);
+          setPost({
+            title: "",
+            body: "",
+            img: "",
+          });
         }}>
         Submit
       </button>

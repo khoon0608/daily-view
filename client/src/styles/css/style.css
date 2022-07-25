@@ -1,4 +1,76 @@
 /** @format */
+/** @format */
+div[id=nav] {
+  position: sticky;
+  top: 0;
+  height: 54px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  font-size: 20px;
+  padding: 0 15px;
+}
+div[id=nav] div[id=home-wrap] {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+div[id=nav] div[id=nav-items-wrap] {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+div[id=nav] div[id=nav-items-wrap] a {
+  margin-left: 10px;
+}
+div[id=nav] a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/** @format */
+div[id=home] {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 10px;
+}
+div[id=home] h1 {
+  margin-bottom: 10px;
+}
+
+/** @format */
+div[id=upload] {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 10px;
+}
+div[id=upload] input[id=input-title] {
+  height: 35px;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+div[id=upload] div[id=btn-pic] {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  height: 50px;
+  width: 80px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,20 +79,12 @@
 
 body {
   height: 100vh;
+  position: relative;
 }
 
-div[id=title] {
-  width: 1000px;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-div[id=title] ul[id=post-list] {
-  display: grid;
-  width: 300px;
-  grid-template-columns: 33% 33% 33%;
+div[id=page-wrap] {
+  height: 100vh !important;
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */

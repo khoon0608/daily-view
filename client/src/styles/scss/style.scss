@@ -1,5 +1,9 @@
 /** @format */
 
+@import "./_nav.scss";
+@import "./home.scss";
+@import "./upload.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -8,19 +12,10 @@
 
 body {
   height: 100vh;
+  position: relative;
 }
 
-div[id="title"] {
-  width: 1000px;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  ul[id="post-list"] {
-    display: grid;
-    width: 300px;
-    grid-template-columns: 33% 33% 33%;
-  }
+div[id="page-wrap"] {
+  height: 100vh !important;
+  border: 1px solid red;
 }

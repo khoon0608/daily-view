@@ -1,0 +1,36 @@
+/** @format */
+
+div[id="nav"] {
+  position: sticky;
+  top: 0;
+  height: 54px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  font-size: 20px;
+  padding: 0 15px;
+
+  div[id="home-wrap"] {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  div[id="nav-items-wrap"] {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      margin-left: 10px;
+    }
+  }
+
+  a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}

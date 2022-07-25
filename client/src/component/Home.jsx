@@ -1,11 +1,13 @@
 /** @format */
 
 import React from "react";
+import List from "./List";
 
-const Home = () => {
+const Home = ({postList}) => {
   return (
-    <div>
-      <h1>Daily-View</h1>
+    <div id='home'>
+      <h1>게시글</h1>
+      <List postList = {postList}/>
     </div>
   );
 };
